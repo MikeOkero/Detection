@@ -30,14 +30,14 @@ def detect_eyes(roi_color, model):
 
 def main():
     classes = ['Open', 'Closed']
-    face_cascade = cv2.CascadeClassifier("data/haarcascade_frontalface_default.xml")
-    left_eye_cascade = cv2.CascadeClassifier("data/haarcascade_lefteye_2splits.xml")
-    right_eye_cascade = cv2.CascadeClassifier("data/haarcascade_righteye_2splits.xml")
+    face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+    left_eye_cascade = cv2.CascadeClassifier("haarcascade_lefteye_2splits.xml")
+    right_eye_cascade = cv2.CascadeClassifier("haarcascade_righteye_2splits.xml")
     cap = cv2.VideoCapture(0)
     model = load_model("best_model.h5")
     count = 0
     alarm_on = False
-    alarm_sound = "data/alarm.mp3"
+    alarm_sound = "alarm.mp3"
     status1 = EyeStatus.OPEN
     status2 = EyeStatus.OPEN
 
