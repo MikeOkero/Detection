@@ -34,7 +34,7 @@ def main():
     left_eye_cascade = cv2.CascadeClassifier("data/haarcascade_lefteye_2splits.xml")
     right_eye_cascade = cv2.CascadeClassifier("data/haarcascade_righteye_2splits.xml")
     cap = cv2.VideoCapture(0)
-    model = load_model("d_drowiness.h5")
+    model = load_model("best_model.h5")
     count = 0
     alarm_on = False
     alarm_sound = "data/alarm.mp3"
